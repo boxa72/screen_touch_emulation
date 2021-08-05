@@ -27,6 +27,8 @@ if __name__ == "__main__":
 
     tap = '730 1000'
     
+    # TODO make this a function
+    # Four separate processes to tap screen in four different places
     p1 = mp.Process(target=tapping, args=(tap,))
     p1.start()
     p1.join()
