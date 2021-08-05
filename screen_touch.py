@@ -20,6 +20,7 @@ def tapping(tap):
     for x in range(1000):
         device.shell(f'input tap {tap}')
 
+# TODO speed up taps, run in parallel
 
 if __name__ == "__main__":
     device, client = connect()
@@ -46,3 +47,7 @@ if __name__ == "__main__":
     p4.join()
     
 
+    p1.close()
+    p2.close()
+    p3.close()
+    p4.close()
