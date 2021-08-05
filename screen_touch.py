@@ -25,4 +25,24 @@ if __name__ == "__main__":
     device, client = connect()
 
     tap = '730 1000'
-    tapping(tap)
+    
+    p1 = mp.Process(target=tapping, args=(tap,))
+    p1.start()
+    p1.join()
+
+    tap = '735 1010'
+    p2 = mp.Process(target=tapping, args=(tap,))
+    p2.start()
+    p2.join()
+
+    tap = '750 1020'
+    p3 = mp.Process(target=tapping, args=(tap,))
+    p3.start()
+    p3.join()
+
+    tap = '755 1030'
+    p4 = mp.Process(target=tapping, args=(tap,))
+    p4.start()
+    p4.join()
+    
+
